@@ -1,0 +1,23 @@
+#!/bin/bash
+
+FFMPEGLOC=$(which ffmpeg)
+if [ "$FFMPEGLOC" == "" ]; then
+    echo "No FFmpeg found"
+else
+    echo "FFmpeg was found at "$FFMPEGLOC
+    echo "Removing old FFmpeg"
+    rm $FFMPEGLOC
+    echo "Done"
+fi
+
+if [ -f "ffmpeg-colab/bin/ffmpeg" ]; then
+    echo "Moving new ffmpeg to /usr/bin"
+    mv ffmpeg-colab/bin/ffmpeg /usr/bin
+    echo "FFmpeg was successfully installed"
+elif [ -f "bin/ffmpeg" ]; then
+    echo "Moving new ffmpeg to /usr/bin"
+    mv bin/ffmpeg /usr/bin
+    echo "FFmpeg was successfully installed"
+else
+    echo "New FFmpeg binary not found."
+fi
