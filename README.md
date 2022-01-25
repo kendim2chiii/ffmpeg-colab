@@ -41,7 +41,7 @@ After installation you can remove the folder.
 * libvmaf ```2.3.0```
 * libvorbis ```1.3.7```
 * libwebp ```1.2.2-rc1```
-* libvpx ```1.10.0``````
+* libvpx ```1.10.0```
 * libx264 ```20211230```
 * libx265 ```3.5```
 * libxvid ```1.3.7```
